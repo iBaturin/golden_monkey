@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MA"
+    android:background="@drawable/bg">
+
+    <Button
+        android:id="@+id/btn_check"
+        android:text="@string/check"
+        android:background="@drawable/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/field"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <GridView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/field"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:numColumns="20"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/colors"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@id/field"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="14dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:id="@+id/clear"
+            android:background="@drawable/strnocolor"
+            tools:ignore="ButtonStyle" />
+        <Button
+            android:textColor="#AAA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="@string/_0"
+            android:id="@+id/zero"
+            android:background="@drawable/str0"
+            tools:ignore="ButtonStyle" />
+        <Button
+            android:textColor="#AAA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="@string/_1"
+            android:id="@+id/one"
+            android:background="@drawable/str1"
+            tools:ignore="ButtonStyle" />
+        <Button
+            android:textColor="#AAA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="@string/_2"
+            android:textSize="20sp"
+            android:id="@+id/two"
+            android:background="@drawable/str2"
+            tools:ignore="ButtonStyle" />
+        <Button
+            android:textColor="#AAA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="@string/_3"
+            android:id="@+id/three"
+            android:background="@drawable/str3"
+            tools:ignore="ButtonStyle" />
+        <Button
+            android:textColor="#AAA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:id="@+id/four"
+            android:text="@string/_4"
+            android:background="@drawable/str4"
+            tools:ignore="ButtonStyle" />
+        <Button
+            android:textColor="#AAA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="@string/_5"
+            android:textSize="20sp"
+            android:id="@+id/five"
+            android:background="@drawable/str5"
+            tools:ignore="ButtonStyle" />
+        <Button
+            android:textColor="#AAA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="@string/_6"
+            android:textSize="20sp"
+            android:id="@+id/six"
+            android:background="@drawable/str6"
+            tools:ignore="ButtonStyle" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/yw"
+        android:visibility="gone"
+        android:animateLayoutChanges="true"
+        layout="@layout/y_w"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

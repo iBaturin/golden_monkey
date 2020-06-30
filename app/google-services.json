@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "359679189950",
+    "firebase_url": "https://goldenmonkey-b6d2d.firebaseio.com",
+    "project_id": "goldenmonkey-b6d2d",
+    "storage_bucket": "goldenmonkey-b6d2d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359679189950:android:a51ad9cb372ac34cd84fef",
+        "android_client_info": {
+          "package_name": "com.baturin.goldenmonkey"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359679189950-scuirce57h7oosd5usce46neb6ukmkp5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgz43YC6TEKwzwVUmEiTHrKjf7-32aIJI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359679189950-scuirce57h7oosd5usce46neb6ukmkp5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
