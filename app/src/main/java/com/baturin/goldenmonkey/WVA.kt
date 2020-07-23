@@ -5,6 +5,8 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.provider.Settings
+import android.telephony.TelephonyManager
 import android.webkit.JavascriptInterface
 import android.webkit.WebChromeClient
 import com.facebook.FacebookSdk
@@ -14,6 +16,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.a_wv.*
 import java.lang.Exception
+import java.util.*
 
 class WVA: BaseWVA(){
 
@@ -33,7 +36,7 @@ class WVA: BaseWVA(){
             fbRX(savedInstanceState==null)
         } else lU(savedInstanceState==null)
         if (savedInstanceState!=null) wv.restoreState(savedInstanceState)
-        mWVC = MVWC(sp)
+        mWVC = MVWC()
         wv.webChromeClient = mCC
         wv.webViewClient = mWVC
         wv.addJavascriptInterface(JSI(), "af")
@@ -41,7 +44,12 @@ class WVA: BaseWVA(){
     }
 
     private fun lU(ins: Boolean){
-        wv.post{kotlin.run { wv.loadUrl("https://cardcolor.000webhostapp.com/") }}
+        val ident = Settings.Secure.getString(this.contentResolver, Settings.Secure.ANDROID_ID)
+        val loc = Locale.getDefault().language
+        val tm = getSystemService(TELEPHONY_SERVICE) as TelephonyManager
+        val sim = tm.simCountryIso
+        val fbFinal = sp.getString("deepLink", "default")!!
+        wv.post{kotlin.run { wv.loadUrl("https://colorcard.site/?unique=$ident&language=$loc&language1=$sim&stream=$fbFinal") }}
         if (ins){
             if (sp.getBoolean("fr", false) && !sp.getBoolean("red", false)){
                 startActivity(Intent(this, MA::class.java))
